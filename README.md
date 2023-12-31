@@ -1,7 +1,7 @@
 # TimlineChartNg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
-# NOTE : AS WE ARE USING FREE - KENDO VERSION LICENSE WATERMARK WILL BE DISPLAYED IN THE OUTPUT
+**NOTE** : AS WE ARE USING FREE - KENDO VERSION LICENSE WATERMARK WILL BE DISPLAYED IN THE OUTPUT
 
 # Technical Document For Reference
 
@@ -10,7 +10,6 @@ https://docs.google.com/document/d/1xdRn01kVnu7cuiaVh25kb_18PTOPvcRoj_hFScCvU5M/
 # Screenshots
 
 https://docs.google.com/document/d/1VPsXIdsRIO59NvayFYZ-JZjT-odywmnDVnqcnce36X4/edit?usp=sharing
-# NOTE : AS WE ARE USING FREE - KENDO VERSION LICENSE WATERMARK WILL BE DISPLAYED IN THE OUTPUT
 
 ## Development server
 
