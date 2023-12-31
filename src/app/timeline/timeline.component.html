@@ -12,22 +12,14 @@
       collapsible: true
     }"
   >
-    <kendo-gantt-column
-      field="title"
-      title="Project Name"
-      [width]="300"
-      [expandable]="true"
-    ></kendo-gantt-column>
-    <kendo-gantt-column
-      field="priority"
-      title="Priority"
-      [width]="100"
-    ></kendo-gantt-column>
-    <kendo-gantt-column
-      field="stage"
-      title="Stage"
-      [width]="150"
-    ></kendo-gantt-column>
+    <ng-container *ngFor="let col of columnsConfig">
+      <kendo-gantt-column
+        [field]="col.field"
+        [title]="col.title"
+        [width]="col.width"
+        [expandable]="col.expandable"
+      ></kendo-gantt-column>
+    </ng-container>
     <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
     <!-- <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view> -->
   </kendo-gantt>

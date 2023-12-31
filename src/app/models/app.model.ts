@@ -145,3 +145,10 @@ export const DATA: IProject[] = [
     blocking: '',
   },
 ];
+
+export interface GanttColumnConfig {
+  field: string;
+  title: string;
+  width: number;
+  expandable?: boolean;
+}

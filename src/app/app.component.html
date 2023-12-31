@@ -11,12 +11,28 @@
     <div class="row">
       <div class="card col-md-10 col-xs-12 col-md-12 col-lg-12 p-0 my-2">
         <div class="card-body text-center">
-          <app-timeline></app-timeline>
+          <app-timeline
+            [GanttTasks]="GanttTasks"
+            [dependencies]="dependencies"
+            [columnsConfig]="[
+              {
+                field: 'title',
+                title: 'Project Name',
+                width: 300,
+                expandable: true
+              },
+              { field: 'priority', title: 'Priority', width: 100 },
+              { field: 'stage', title: 'Stage', width: 150 }
+            ]"
+          ></app-timeline>
         </div>
       </div>
       <div class="card col-md-10 col-xs-12 col-md-12 col-lg-12">
         <div class="card-body">
-          <app-chart></app-chart>
+          <app-chart
+            [chartConfig]="chartConfig"
+            (filterChangeEmit)="onFilterChange($event)"
+          ></app-chart>
         </div>
       </div>
     </div>
