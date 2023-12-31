@@ -1,0 +1,55 @@
+<div class="col-sm-12 col-lg-12 col-xs-12 p-2">
+  <div class="row g-1">
+    <div class="col-md-2 mx-2">
+      <label>Priority : </label>
+      <select
+        #prioritySelect
+        class="custom-select mx-1"
+        (change)="onFilterChange()"
+      >
+        <option value="all">All</option>
+        <option value="P0">P0</option>
+        <option value="P1">P1</option>
+        <option value="P2">P2</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label>Stage: </label>
+      <select
+        #stageSelect
+        class="custom-select mx-1"
+        (change)="onFilterChange()"
+      >
+        <option value="all">All</option>
+        <option value="Scoping">Scoping</option>
+        <option value="Implementation">Implementation</option>
+        <option value="Testing">Testing</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <kendo-chart>
+      <kendo-chart-title
+        text="Project Distribution per Team Member"
+      ></kendo-chart-title>
+      <kendo-chart-legend
+        position="bottom"
+        orientation="horizontal"
+      ></kendo-chart-legend>
+      <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item
+          [categories]="teamMemberNames"
+        ></kendo-chart-category-axis-item>
+      </kendo-chart-category-axis>
+      <kendo-chart-series>
+        <kendo-chart-series-item
+          type="bar"
+          [data]="projectCounts"
+          field="count"
+          categoryField="name"
+        >
+        </kendo-chart-series-item>
+      </kendo-chart-series>
+    </kendo-chart>
+  </div>
+</div>

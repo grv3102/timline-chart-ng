@@ -1,0 +1,34 @@
+<div class="col-sm-12 col-lg-12 col-xs-12">
+  <kendo-gantt
+    [data]="GanttTasks"
+    [dependencies]="dependencies"
+    kendoGanttExpandable
+    [initiallyExpanded]="true"
+    kendoGanttSelectable
+    [(selectedKeys)]="selectedKeys"
+    style="height: 500px"
+    [treeListPaneOptions]="{
+      collapsed: false,
+      collapsible: true
+    }"
+  >
+    <kendo-gantt-column
+      field="title"
+      title="Project Name"
+      [width]="300"
+      [expandable]="true"
+    ></kendo-gantt-column>
+    <kendo-gantt-column
+      field="priority"
+      title="Priority"
+      [width]="100"
+    ></kendo-gantt-column>
+    <kendo-gantt-column
+      field="stage"
+      title="Stage"
+      [width]="150"
+    ></kendo-gantt-column>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+    <!-- <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view> -->
+  </kendo-gantt>
+</div>
