@@ -1,6 +1,9 @@
 <div class="col-sm-12 col-lg-12 col-xs-12 p-2">
   <div class="row g-1">
-    <div *ngFor="let filter of chartConfig.filters" class="col-md-3 mx-1">
+    <div
+      *ngFor="let filter of chartConfig.filters"
+      class="col-lg-2 col-md-2 col-sm-3 col-xs-4 g-2"
+    >
       <label>{{ filter.label }} : </label>
       <select
         [attr.id]="filter.id"
